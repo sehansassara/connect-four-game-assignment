@@ -27,7 +27,6 @@ private BoardUI boardUI;
     public int findNextAvailableSpot(int col) {
         for (int i = 0; i < pieces[col].length; i++) {
             if (pieces[col][i].equals(Piece.EMPTY)) {
-                System.out.println(i);
                 return i;
             }
         }
@@ -68,6 +67,11 @@ private BoardUI boardUI;
                 pieces[col][i] = move;
             }
         } */
+    }
+
+    @Override
+    public void updateMove(int col, int row, Piece move) {
+        pieces[col][row]=move;
     }
 
     @Override
